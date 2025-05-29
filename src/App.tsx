@@ -19,47 +19,43 @@ const Navigation = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <span className="text-xl font-semibold text-gray-900">
-              PackagingCompany
+              WGglobal
             </span>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
             <Link
               to="/"
-              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${
-                isActive('/')
+              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${isActive('/')
                   ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:border-primary-300 hover:text-gray-900'
-              }`}
+                }`}
             >
               Главная
             </Link>
             <Link
               to="/about"
-              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${
-                isActive('/about')
+              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${isActive('/about')
                   ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:border-primary-300 hover:text-gray-900'
-              }`}
+                }`}
             >
               О компании
             </Link>
             <Link
               to="/catalog"
-              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${
-                isActive('/catalog')
+              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${isActive('/catalog')
                   ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:border-primary-300 hover:text-gray-900'
-              }`}
+                }`}
             >
               Каталог
             </Link>
             <Link
               to="/contacts"
-              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${
-                isActive('/contacts')
+              className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-colors ${isActive('/contacts')
                   ? 'border-primary-500 text-primary-600'
                   : 'border-transparent text-gray-500 hover:border-primary-300 hover:text-gray-900'
-              }`}
+                }`}
             >
               Контакты
             </Link>
@@ -72,41 +68,37 @@ const Navigation = () => {
         <div className="pt-2 pb-3 space-y-1">
           <Link
             to="/"
-            className={`block pl-3 pr-4 py-2 text-base font-medium ${
-              isActive('/')
+            className={`block pl-3 pr-4 py-2 text-base font-medium ${isActive('/')
                 ? 'bg-primary-50 text-primary-600 border-l-4 border-primary-500'
                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-            }`}
+              }`}
           >
             Главная
           </Link>
           <Link
             to="/about"
-            className={`block pl-3 pr-4 py-2 text-base font-medium ${
-              isActive('/about')
+            className={`block pl-3 pr-4 py-2 text-base font-medium ${isActive('/about')
                 ? 'bg-primary-50 text-primary-600 border-l-4 border-primary-500'
                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-            }`}
+              }`}
           >
             О компании
           </Link>
           <Link
             to="/catalog"
-            className={`block pl-3 pr-4 py-2 text-base font-medium ${
-              isActive('/catalog')
+            className={`block pl-3 pr-4 py-2 text-base font-medium ${isActive('/catalog')
                 ? 'bg-primary-50 text-primary-600 border-l-4 border-primary-500'
                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-            }`}
+              }`}
           >
             Каталог
           </Link>
           <Link
             to="/contacts"
-            className={`block pl-3 pr-4 py-2 text-base font-medium ${
-              isActive('/contacts')
+            className={`block pl-3 pr-4 py-2 text-base font-medium ${isActive('/contacts')
                 ? 'bg-primary-50 text-primary-600 border-l-4 border-primary-500'
                 : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-            }`}
+              }`}
           >
             Контакты
           </Link>

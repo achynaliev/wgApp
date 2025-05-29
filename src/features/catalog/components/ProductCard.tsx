@@ -10,6 +10,7 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
   const [isRequesting, setIsRequesting] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
 
   const handlePriceRequest = async () => {
     setIsRequesting(true);
@@ -35,16 +36,31 @@ const ProductCard = ({ product }: ProductCardProps) => {
     }
   };
 
-  const fallbackImage = 'https://via.placeholder.com/400x533?text=Изображение+недоступно';
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
+    setImageLoading(false);
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-      <div className="aspect-w-3 aspect-h-4 relative">
+      <div className="aspect-w-3 aspect-h-4 relative bg-gray-100">
+        {imageLoading && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+          </div>
+        )}
         <img
-          src={imageError ? fallbackImage : product.image}
+          src={imageError ? 'https://via.placeholder.com/400x533?text=Нет+изображения' : product.image}
           alt={product.name}
-          className="object-cover w-full h-full"
-          onError={() => setImageError(true)}
+          className={`object-cover w-full h-full transition-opacity duration-300 ${
+            imageLoading ? 'opacity-0' : 'opacity-100'
+          }`}
+          onLoad={handleImageLoad}
+          onError={handleImageError}
           loading="lazy"
         />
       </div>
