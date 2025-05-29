@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import type { Product } from '../store/catalogSlice';
-import OptimizedImage from '../../../shared/components/OptimizedImage';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
@@ -10,6 +9,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const [isRequesting, setIsRequesting] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   const handlePriceRequest = async () => {
     setIsRequesting(true);
@@ -35,15 +35,17 @@ const ProductCard = ({ product }: ProductCardProps) => {
     }
   };
 
+  const fallbackImage = 'https://via.placeholder.com/400x533?text=Изображение+недоступно';
+
   return (
     <div className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
       <div className="aspect-w-3 aspect-h-4 relative">
-        <OptimizedImage
-          src={product.image}
+        <img
+          src={imageError ? fallbackImage : product.image}
           alt={product.name}
           className="object-cover w-full h-full"
-          width={400}
-          height={533}
+          onError={() => setImageError(true)}
+          loading="lazy"
         />
       </div>
       <div className="p-4">
