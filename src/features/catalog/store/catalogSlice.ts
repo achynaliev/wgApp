@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import i18n from '../../../shared/i18n/i18n';
 
 interface CatalogState {
   selectedCategory: string;

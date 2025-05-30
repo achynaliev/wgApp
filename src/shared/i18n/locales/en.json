@@ -219,5 +219,10 @@
       "success": "Price request sent successfully! We will contact you soon.",
       "error": "An error occurred while sending the request."
     }
+  },
+  "error": {
+    "pageNotFound": "Page Not Found",
+    "pageNotFoundDescription": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "backToHome": "Back to Home"
   }
 } 

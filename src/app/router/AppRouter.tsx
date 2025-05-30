@@ -3,6 +3,7 @@ import HomePage from '../../features/home/pages/HomePage';
 import AboutPage from '../../features/about/pages/AboutPage';
 import CatalogPage from '../../features/catalog/pages/CatalogPage';
 import ContactsPage from '../../features/contacts/pages/ContactsPage';
+import NotFoundPage from '../../features/error/pages/NotFoundPage';
 
 const AppRouter = () => {
   return (
@@ -11,6 +12,7 @@ const AppRouter = () => {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/catalog" element={<CatalogPage />} />
       <Route path="/contacts" element={<ContactsPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };
