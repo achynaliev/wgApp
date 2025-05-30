@@ -22,14 +22,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0 w-16">
               <span className="text-2xl font-bold text-primary-600">WG</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden sm:ml-6 sm:flex sm:items-center">
-            <div className="flex space-x-8">
+            <div className="flex">
               {navigationItems.map(({ path, label }) => (
                 <Link
                   key={path}
@@ -38,20 +38,22 @@ const Header = () => {
                     isActive(path)
                       ? 'border-primary-500 text-gray-900'
                       : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
-                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+                  } inline-flex items-center justify-center px-1 pt-1 border-b-2 text-sm font-medium w-24`}
                 >
                   {label}
                 </Link>
               ))}
             </div>
-            <div className="ml-8">
+            <div className="ml-8 w-20 flex justify-center">
               <LanguageSwitcher />
             </div>
           </nav>
 
           {/* Mobile menu button */}
           <div className="flex items-center sm:hidden">
-            <LanguageSwitcher />
+            <div className="w-20 flex justify-center">
+              <LanguageSwitcher />
+            </div>
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
