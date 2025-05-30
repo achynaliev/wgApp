@@ -61,11 +61,11 @@ const initialProducts: Product[] = [
   }
 ];
 
-const allCategory = i18n.t('catalog.allCategories');
+const ALL_CATEGORIES = 'Все';
 
 const initialState: CatalogState = {
-  selectedCategory: allCategory,
-  categories: [allCategory, 'Пакеты', 'Коробки', 'Пленка', 'Этикетки'],
+  selectedCategory: ALL_CATEGORIES,
+  categories: [ALL_CATEGORIES, 'Пакеты', 'Коробки', 'Пленка', 'Этикетки'],
   products: initialProducts,
 };
 

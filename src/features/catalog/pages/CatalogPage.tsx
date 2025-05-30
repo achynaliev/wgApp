@@ -10,7 +10,7 @@ const CatalogPage = () => {
   const selectedCategory = useAppSelector((state: RootState) => state.catalog.selectedCategory);
   const products = useAppSelector((state: RootState) => {
     const allProducts = state.catalog.products;
-    return selectedCategory === t('catalog.allCategories')
+    return selectedCategory === 'Все'
       ? allProducts
       : allProducts.filter(product => product.category === selectedCategory);
   });

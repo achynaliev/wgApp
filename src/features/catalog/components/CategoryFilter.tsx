@@ -9,6 +9,13 @@ const CategoryFilter = () => {
   const selectedCategory = useAppSelector((state: RootState) => state.catalog.selectedCategory);
   const categories = useAppSelector((state: RootState) => state.catalog.categories);
 
+  const getCategoryLabel = (category: string) => {
+    if (category === 'Все') {
+      return t('catalog.allCategories');
+    }
+    return category;
+  };
+
   return (
     <div className="mb-8 bg-white p-6 rounded-lg shadow-sm">
       <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('catalog.title')}</h2>
@@ -23,7 +30,7 @@ const CategoryFilter = () => {
                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'
             }`}
           >
-            {category === 'Все' ? t('catalog.allCategories') : category}
+            {getCategoryLabel(category)}
           </button>
         ))}
       </div>
