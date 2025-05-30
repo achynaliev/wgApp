@@ -1,8 +1,12 @@
+import { useTranslation } from 'react-i18next';
+
 const FeaturesSection = () => {
+  const { t } = useTranslation();
+
   const features = [
     {
-      title: 'Опыт работы',
-      description: 'Более 5 лет опыта работы с крупнейшими маркетплейсами',
+      title: t('home.features.items.0.title'),
+      description: t('home.features.items.0.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -10,8 +14,8 @@ const FeaturesSection = () => {
       ),
     },
     {
-      title: 'Собственное производство',
-      description: 'Контроль качества на всех этапах производства упаковки',
+      title: t('home.features.items.1.title'),
+      description: t('home.features.items.1.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -19,8 +23,8 @@ const FeaturesSection = () => {
       ),
     },
     {
-      title: 'Быстрые сроки',
-      description: 'Выполнение заказа от 3 дней с момента утверждения макета',
+      title: t('home.features.items.2.title'),
+      description: t('home.features.items.2.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -28,8 +32,8 @@ const FeaturesSection = () => {
       ),
     },
     {
-      title: 'Гарантия качества',
-      description: 'Соответствие всем требованиям маркетплейсов и стандартам качества',
+      title: t('home.features.items.3.title'),
+      description: t('home.features.items.3.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -37,8 +41,8 @@ const FeaturesSection = () => {
       ),
     },
     {
-      title: 'Персональный менеджер',
-      description: 'Сопровождение проекта на всех этапах реализации',
+      title: t('home.features.items.4.title'),
+      description: t('home.features.items.4.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -46,8 +50,8 @@ const FeaturesSection = () => {
       ),
     },
     {
-      title: 'Выгодные цены',
-      description: 'Оптимальное соотношение цены и качества для любого объема',
+      title: t('home.features.items.5.title'),
+      description: t('home.features.items.5.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -61,10 +65,10 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Почему выбирают нас
+            {t('home.features.title')}
           </h2>
           <p className="mt-4 text-xl text-gray-500">
-            Преимущества работы с нашей компанией
+            {t('home.features.subtitle')}
           </p>
         </div>
 

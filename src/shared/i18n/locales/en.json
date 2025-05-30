@@ -34,13 +34,178 @@
       "terms": "Terms of Use"
     }
   },
+  "home": {
+    "hero": {
+      "title": "Quality Packaging",
+      "subtitle": "for your business",
+      "description": "We offer a wide range of packaging solutions for various business sectors. From standard to custom solutions - we'll help you choose the perfect packaging.",
+      "cta": "Learn More",
+      "imageAlt": "Product packaging"
+    },
+    "services": {
+      "title": "How We Work",
+      "subtitle": "Full cycle of services for packaging and preparing goods for sale",
+      "items": [
+        {
+          "title": "Idea",
+          "description": "We analyze your product and target audience to form a packaging concept"
+        },
+        {
+          "title": "Formula",
+          "description": "We develop an optimal solution considering platform requirements and your budget"
+        },
+        {
+          "title": "Packaging",
+          "description": "We create unique packaging that protects the product and attracts attention"
+        },
+        {
+          "title": "Logistics",
+          "description": "We organize delivery to the marketplace warehouse in compliance with all requirements"
+        }
+      ]
+    },
+    "audience": {
+      "title": "Who We Serve",
+      "subtitle": "We help businesses of all sizes work effectively with marketplaces",
+      "items": [
+        {
+          "title": "Brands",
+          "description": "For companies looking to stand out on marketplaces and increase brand awareness"
+        },
+        {
+          "title": "Sellers",
+          "description": "For sellers who want to optimize their product preparation process"
+        },
+        {
+          "title": "Retail Chains",
+          "description": "For retail chains looking to scale their online sales through marketplaces"
+        }
+      ]
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "subtitle": "Benefits of working with our company",
+      "items": [
+        {
+          "title": "Experience",
+          "description": "Over 5 years of experience working with major marketplaces"
+        },
+        {
+          "title": "In-house Production",
+          "description": "Quality control at all stages of packaging production"
+        },
+        {
+          "title": "Fast Turnaround",
+          "description": "Order fulfillment from 3 days after design approval"
+        },
+        {
+          "title": "Quality Guarantee",
+          "description": "Compliance with all marketplace requirements and quality standards"
+        },
+        {
+          "title": "Personal Manager",
+          "description": "Project support at all stages of implementation"
+        },
+        {
+          "title": "Competitive Prices",
+          "description": "Optimal price-quality ratio for any volume"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Our Work",
+      "subtitle": "Examples of completed packaging projects",
+      "orderCta": "Order Packaging",
+      "items": [
+        {
+          "title": "Gift Boxes",
+          "alt": "Packaging example 1"
+        },
+        {
+          "title": "Eco-friendly Packaging",
+          "alt": "Packaging example 2"
+        },
+        {
+          "title": "Branded Boxes",
+          "alt": "Packaging example 3"
+        },
+        {
+          "title": "Protective Packaging",
+          "alt": "Packaging example 4"
+        },
+        {
+          "title": "Premium Packaging",
+          "alt": "Packaging example 5"
+        },
+        {
+          "title": "Transport Packaging",
+          "alt": "Packaging example 6"
+        }
+      ]
+    },
+    "catalogSection": {
+      "title": "Our Solutions",
+      "subtitle": "Choose the right packaging option for your products",
+      "calculateCta": "Calculate Cost",
+      "detailsCta": "Learn More",
+      "items": [
+        {
+          "name": "Cardboard Packaging",
+          "description": "Eco-friendly packaging made from recycled cardboard in various sizes",
+          "price": "from $0.50/pc"
+        },
+        {
+          "name": "Plastic Packaging",
+          "description": "Durable protective packaging for fragile items",
+          "price": "from $0.80/pc"
+        },
+        {
+          "name": "Gift Packaging",
+          "description": "Premium packaging for gifts and luxury items",
+          "price": "from $1.50/pc"
+        },
+        {
+          "name": "Branded Bags",
+          "description": "Bags with your logo and corporate design",
+          "price": "from $0.30/pc"
+        }
+      ]
+    },
+    "contactForm": {
+      "title": "Submit Request",
+      "subtitle": "Fill out the form and we'll contact you with a cost estimate",
+      "fields": {
+        "name": {
+          "label": "Your Name",
+          "placeholder": "Enter your name"
+        },
+        "contact": {
+          "label": "Phone or Email",
+          "placeholder": "Enter your contact"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Describe your request"
+        }
+      },
+      "submitButton": "Submit Request",
+      "success": "Your request has been successfully sent! We will contact you soon.",
+      "error": "An error occurred while sending your request. Please try again."
+    }
+  },
   "catalog": {
     "title": "Product Catalog",
     "subtitle": "Choose a category or browse our entire product range",
     "requestPrice": "Request Price",
     "requestingPrice": "Requesting...",
     "noProducts": "No products in this category yet",
-    "allCategories": "All"
+    "allCategories": "All",
+    "categories": {
+      "bags": "Bags",
+      "boxes": "Boxes",
+      "film": "Film",
+      "labels": "Labels"
+    }
   },
   "common": {
     "loading": "Loading...",
