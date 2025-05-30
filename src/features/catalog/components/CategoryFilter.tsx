@@ -15,10 +15,10 @@ const CategoryFilter = () => {
           <button
             key={category}
             onClick={() => dispatch(setSelectedCategory(category))}
-            className={`px-4 py-2 rounded-full transition-all ${
+            className={`px-4 py-2 rounded-full transition-all duration-200 ${
               selectedCategory === category
-                ? 'bg-primary-600 text-white font-medium shadow-md transform scale-105'
-                : 'bg-white text-gray-600 hover:bg-gray-100'
+                ? 'bg-primary-600 text-white font-medium shadow-md transform scale-105 ring-2 ring-primary-300'
+                : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200'
             }`}
           >
             {category}
