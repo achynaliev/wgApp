@@ -33,10 +33,11 @@ const HeroSection = () => {
           </main>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <div className="h-56 sm:h-72 md:h-96 lg:h-full w-full relative">
+      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 h-[600px]">
+        <div className="h-full w-full relative overflow-hidden">
           <img
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{ objectPosition: '50% 50%' }}
             src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
             alt={t('home.hero.imageAlt')}
           />
