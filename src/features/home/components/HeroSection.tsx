@@ -20,7 +20,7 @@ const HeroSection = () => {
                 </p>
               </div>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start min-h-[80px]">
-                <div className="rounded-md shadow">
+                <div className="rounded-md">
                   <Link
                     to="/about"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transform transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 md:py-4 md:text-lg md:px-10"
