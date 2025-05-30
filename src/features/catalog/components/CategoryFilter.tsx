@@ -17,7 +17,7 @@ const CategoryFilter = () => {
             onClick={() => dispatch(setSelectedCategory(category))}
             className={`px-6 py-2.5 rounded-full transition-all duration-200 font-medium ${
               selectedCategory === category
-                ? 'bg-primary-600 text-white shadow-md transform scale-105 ring-2 ring-primary-300'
+                ? 'bg-gray-100 text-gray-900 shadow-sm transform scale-105 ring-2 ring-gray-300 border border-gray-200'
                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'
             }`}
           >
