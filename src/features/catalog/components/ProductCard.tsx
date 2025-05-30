@@ -3,6 +3,7 @@ import type { Product } from '../store/catalogSlice';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
+import OptimizedImage from '../../../shared/components/OptimizedImage';
 
 interface ProductCardProps {
   product: Product;
@@ -55,7 +56,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
           </div>
         )}
-        <img
+        <OptimizedImage
           src={imageError ? 'https://via.placeholder.com/400x300?text=No+Image' : product.image}
           alt={product.name}
           className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
@@ -63,7 +64,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
           }`}
           onLoad={handleImageLoad}
           onError={handleImageError}
-          loading="lazy"
         />
       </div>
       <div className="flex flex-col flex-grow p-4">
