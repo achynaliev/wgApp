@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const isActive = (path: string) => location.pathname === path;
 
   const navigationItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/catalog', label: 'Catalog' },
-    { path: '/contacts', label: 'Contacts' },
+    { path: '/', label: t('navigation.home') },
+    { path: '/about', label: t('navigation.about') },
+    { path: '/catalog', label: t('navigation.catalog') },
+    { path: '/contacts', label: t('navigation.contacts') },
   ];
 
   return (
@@ -25,28 +28,34 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden sm:ml-6 sm:flex sm:space-x-8">
-            {navigationItems.map(({ path, label }) => (
-              <Link
-                key={path}
-                to={path}
-                className={`${
-                  isActive(path)
-                    ? 'border-primary-500 text-gray-900'
-                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
-                } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
-              >
-                {label}
-              </Link>
-            ))}
+          <nav className="hidden sm:ml-6 sm:flex sm:items-center">
+            <div className="flex space-x-8">
+              {navigationItems.map(({ path, label }) => (
+                <Link
+                  key={path}
+                  to={path}
+                  className={`${
+                    isActive(path)
+                      ? 'border-primary-500 text-gray-900'
+                      : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+            <div className="ml-8">
+              <LanguageSwitcher />
+            </div>
           </nav>
 
           {/* Mobile menu button */}
           <div className="flex items-center sm:hidden">
+            <LanguageSwitcher />
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+              className="ml-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
             >
               <span className="sr-only">Open main menu</span>
               {/* Icon when menu is closed */}

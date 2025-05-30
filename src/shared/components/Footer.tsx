@@ -1,27 +1,30 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Компания */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-semibold">О компании</h3>
+            <h3 className="text-white text-lg font-semibold">{t('footer.company.title')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="hover:text-white transition-colors">
-                  О нас
+                  {t('footer.company.about')}
                 </Link>
               </li>
               <li>
                 <Link to="/catalog" className="hover:text-white transition-colors">
-                  Каталог
+                  {t('footer.company.catalog')}
                 </Link>
               </li>
               <li>
                 <Link to="/contacts" className="hover:text-white transition-colors">
-                  Контакты
+                  {t('footer.company.contacts')}
                 </Link>
               </li>
             </ul>
@@ -29,7 +32,7 @@ const Footer = () => {
 
           {/* Контакты */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-semibold">Контакты</h3>
+            <h3 className="text-white text-lg font-semibold">{t('footer.contact.title')}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="tel:+996555123456" className="hover:text-white transition-colors">
@@ -42,14 +45,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <span>г. Бишкек, ул. Примерная 123</span>
+                <span>{t('footer.contact.address')}</span>
               </li>
             </ul>
           </div>
 
           {/* Социальные сети */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-semibold">Мы в соцсетях</h3>
+            <h3 className="text-white text-lg font-semibold">{t('footer.social.title')}</h3>
             <ul className="space-y-2">
               <li>
                 <a
@@ -58,7 +61,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  WhatsApp
+                  {t('footer.social.whatsapp')}
                 </a>
               </li>
               <li>
@@ -68,7 +71,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  Telegram
+                  {t('footer.social.telegram')}
                 </a>
               </li>
               <li>
@@ -78,7 +81,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  Instagram
+                  {t('footer.social.instagram')}
                 </a>
               </li>
             </ul>
@@ -86,11 +89,11 @@ const Footer = () => {
 
           {/* Режим работы */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-semibold">Режим работы</h3>
+            <h3 className="text-white text-lg font-semibold">{t('footer.workHours.title')}</h3>
             <ul className="space-y-2">
-              <li>Пн-Пт: 9:00 - 18:00</li>
-              <li>Сб: 10:00 - 15:00</li>
-              <li>Вс: Выходной</li>
+              <li>{t('footer.workHours.weekdays')}</li>
+              <li>{t('footer.workHours.saturday')}</li>
+              <li>{t('footer.workHours.sunday')}</li>
             </ul>
           </div>
         </div>
@@ -98,14 +101,14 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm">
-              © {new Date().getFullYear()} WheatGrass. Все права защищены.
+              © {new Date().getFullYear()} WheatGrass. {t('footer.legal.rights')}
             </p>
             <div className="flex space-x-6">
               <Link to="/privacy" className="text-sm hover:text-white transition-colors">
-                Политика конфиденциальности
+                {t('footer.legal.privacy')}
               </Link>
               <Link to="/terms" className="text-sm hover:text-white transition-colors">
-                Условия использования
+                {t('footer.legal.terms')}
               </Link>
             </div>
           </div>

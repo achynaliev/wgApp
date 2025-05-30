@@ -1,0 +1,58 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "catalog": "Catalog",
+    "contacts": "Contacts"
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "catalog": "Catalog",
+      "contacts": "Contacts"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "123 Example St., Bishkek"
+    },
+    "social": {
+      "title": "Social Media",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "instagram": "Instagram"
+    },
+    "workHours": {
+      "title": "Working Hours",
+      "weekdays": "Mon-Fri: 9:00 AM - 6:00 PM",
+      "saturday": "Sat: 10:00 AM - 3:00 PM",
+      "sunday": "Sun: Closed"
+    },
+    "legal": {
+      "rights": "All rights reserved",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    }
+  },
+  "catalog": {
+    "title": "Product Catalog",
+    "subtitle": "Choose a category or browse our entire product range",
+    "requestPrice": "Request Price",
+    "requestingPrice": "Requesting...",
+    "noProducts": "No products in this category yet",
+    "allCategories": "All"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+  "notifications": {
+    "priceRequest": {
+      "success": "Price request sent successfully! We will contact you soon.",
+      "error": "An error occurred while sending the request."
+    }
+  }
+} 

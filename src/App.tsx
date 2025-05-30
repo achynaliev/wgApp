@@ -6,6 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Layout from './shared/components/Layout';
 import AppRouter from './app/router/AppRouter';
 
+// Initialize i18n
+import './shared/i18n/i18n';
+
 const App = () => {
   return (
     <Provider store={store}>

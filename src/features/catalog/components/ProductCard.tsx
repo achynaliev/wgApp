@@ -2,12 +2,14 @@ import { useState } from 'react';
 import type { Product } from '../store/catalogSlice';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const { t } = useTranslation();
   const [isRequesting, setIsRequesting] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
@@ -27,9 +29,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY || ''
       );
 
-      toast.success('Запрос цены отправлен успешно! Мы свяжемся с вами в ближайшее время.');
+      toast.success(t('notifications.priceRequest.success'));
     } catch (error) {
-      toast.error('Произошла ошибка при отправке запроса.');
+      toast.error(t('notifications.priceRequest.error'));
       console.error('EmailJS error:', error);
     } finally {
       setIsRequesting(false);
@@ -54,7 +56,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
         )}
         <img
-          src={imageError ? 'https://via.placeholder.com/400x300?text=Нет+изображения' : product.image}
+          src={imageError ? 'https://via.placeholder.com/400x300?text=No+Image' : product.image}
           alt={product.name}
           className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
             imageLoading ? 'opacity-0' : 'opacity-100'
@@ -80,7 +82,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           onClick={handlePriceRequest}
           disabled={isRequesting}
         >
-          {isRequesting ? 'Отправка запроса...' : 'Запросить цену'}
+          {isRequesting ? t('catalog.requestingPrice') : t('catalog.requestPrice')}
         </button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
+import i18n from '../../../shared/i18n/i18n';
 
 interface CatalogState {
   selectedCategory: string;
@@ -60,9 +61,11 @@ const initialProducts: Product[] = [
   }
 ];
 
+const allCategory = i18n.t('catalog.allCategories');
+
 const initialState: CatalogState = {
-  selectedCategory: 'Все',
-  categories: ['Все', 'Пакеты', 'Коробки', 'Пленка', 'Этикетки'],
+  selectedCategory: allCategory,
+  categories: [allCategory, 'Пакеты', 'Коробки', 'Пленка', 'Этикетки'],
   products: initialProducts,
 };
 
