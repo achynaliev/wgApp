@@ -1,8 +1,4 @@
-import { useTranslation } from 'react-i18next';
-
 const ServicesSection = () => {
-  const { t } = useTranslation();
-
   const advantages = [
     {
       title: 'Широкий ассортимент упаковки',
