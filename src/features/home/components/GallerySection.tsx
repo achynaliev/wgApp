@@ -93,15 +93,6 @@ const GallerySection = () => {
             ))}
           </div>
         </div>
-
-        <div className="mt-12 text-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700"
-          >
-            {t('home.gallery.orderCta')}
-          </a>
-        </div>
       </div>
     </section>
   );
