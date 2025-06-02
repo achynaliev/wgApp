@@ -1,8 +1,6 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-
 const AdvantagesSection = () => {
-  const { t } = useTranslation();
+  // Remove unused t variable since we're not using translations yet
+  // const { t } = useTranslation();
 
   const advantages = [
     {
