@@ -28,19 +28,19 @@ const ContactForm = () => {
   return (
     <section id="contact" className="py-12 bg-white sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto lg:max-w-none">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              {t('home.contactForm.title')}
-            </h2>
-            <p className="mt-4 text-xl text-gray-500">
-              {t('home.contactForm.subtitle')}
-            </p>
-          </div>
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            {t('home.contactForm.title')}
+          </h2>
+          <p className="mt-4 text-xl text-gray-500">
+            {t('home.contactForm.subtitle')}
+          </p>
+        </div>
 
-          <div className="mt-12">
-            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-              <div className="sm:col-span-2">
+        <div className="mt-12">
+          <div className="max-w-xl mx-auto w-full">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   {t('home.contactForm.fields.name.label')}
                 </label>
@@ -58,7 +58,7 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="sm:col-span-2">
+              <div>
                 <label htmlFor="contact" className="block text-sm font-medium text-gray-700">
                   {t('home.contactForm.fields.contact.label')}
                 </label>
@@ -76,7 +76,7 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="sm:col-span-2">
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                   {t('home.contactForm.fields.message.label')}
                 </label>
@@ -93,7 +93,7 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="sm:col-span-2">
+              <div>
                 <button
                   type="submit"
                   className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
