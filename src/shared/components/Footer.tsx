@@ -56,7 +56,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://wa.me/996555123456"
+                  href="https://wa.me/77768472061"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
@@ -91,9 +91,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-white text-lg font-semibold">{t('footer.workHours.title')}</h3>
             <ul className="space-y-2">
-              <li>{t('footer.workHours.weekdays')}</li>
-              <li>{t('footer.workHours.saturday')}</li>
-              <li>{t('footer.workHours.sunday')}</li>
+              <li>9:00-19:00 без выходных</li>
             </ul>
           </div>
         </div>

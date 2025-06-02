@@ -4,10 +4,10 @@ const ContactsPage = () => {
   const contactInfo = {
     phone: '+996 555 123 456',
     email: 'info@packagingcompany.kg',
-    whatsapp: 'https://wa.me/996555123456',
+    whatsapp: 'https://wa.me/77768472061',
     telegram: 'https://t.me/packagingcompany',
     address: 'г. Бишкек, ул. Ибраимова 115/1',
-    workingHours: 'Пн-Пт: 9:00 - 18:00',
+    workingHours: '9:00-19:00 без выходных',
     legal: {
       companyName: 'ОсОО "Packaging Company"',
       inn: '12345678901234',
