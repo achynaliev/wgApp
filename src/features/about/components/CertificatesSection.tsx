@@ -8,7 +8,20 @@ interface Certificate {
 const CertificatesSection = () => {
   const { t } = useTranslation();
 
-  const certificates = t<Certificate[]>('about.certificates.items', { returnObjects: true });
+  const certificates: Certificate[] = [
+    {
+      title: t('about.certificates.items.0.title'),
+      description: t('about.certificates.items.0.description'),
+    },
+    {
+      title: t('about.certificates.items.1.title'),
+      description: t('about.certificates.items.1.description'),
+    },
+    {
+      title: t('about.certificates.items.2.title'),
+      description: t('about.certificates.items.2.description'),
+    },
+  ];
 
   return (
     <section className="py-12 bg-white sm:py-16 lg:py-20">
@@ -24,7 +37,7 @@ const CertificatesSection = () => {
 
         <div className="mt-16">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {certificates.map((certificate: Certificate, index: number) => (
+            {certificates.map((certificate, index) => (
               <div
                 key={index}
                 className="relative bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
