@@ -241,6 +241,30 @@
     "location": {
       "title": "Как нас найти",
       "mapTitle": "Карта"
+    },
+    "form": {
+      "title": "Напишите нам",
+      "fields": {
+        "name": {
+          "label": "Имя",
+          "placeholder": "Введите ваше имя"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Введите ваш email"
+        },
+        "phone": {
+          "label": "Телефон",
+          "placeholder": "Введите ваш номер телефона"
+        },
+        "message": {
+          "label": "Сообщение",
+          "placeholder": "Введите ваше сообщение"
+        }
+      },
+      "submitButton": "Отправить",
+      "success": "Сообщение успешно отправлено!",
+      "error": "Произошла ошибка при отправке сообщения."
     }
   }
 } 

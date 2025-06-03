@@ -190,7 +190,7 @@
       },
       "submitButton": "Submit Request",
       "success": "Your request has been successfully sent! We will contact you soon.",
-      "error": "An error occurred while sending your request. Please try again."
+      "error": "An error occurred while sending your request."
     }
   },
   "catalog": {
@@ -241,6 +241,30 @@
     "location": {
       "title": "How to Find Us",
       "mapTitle": "Map"
+    },
+    "form": {
+      "title": "Write to Us",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Enter your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "Enter your phone number"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Enter your message"
+        }
+      },
+      "submitButton": "Send",
+      "success": "Message sent successfully!",
+      "error": "An error occurred while sending the message."
     }
   }
 }
