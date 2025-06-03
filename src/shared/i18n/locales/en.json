@@ -266,5 +266,125 @@
       "success": "Message sent successfully!",
       "error": "An error occurred while sending the message."
     }
+  },
+  "about": {
+    "history": {
+      "title": "Company History",
+      "subtitle": "Over 5 years of experience in marketplace packaging",
+      "content": {
+        "p1": "Our company started its journey in 2018 as a small packaging design studio. We quickly realized that the marketplace industry needed comprehensive solutions: from concept development to production and delivery of finished packaging. This understanding defined our further development.",
+        "p2": "In 2020, we launched our own production facility, which allowed us to control quality at all stages and offer optimal prices to clients. During this time, we have implemented more than 1,000 projects for clients of various scales: from small brands to large retail chains.",
+        "p3": "Today, we are a team of professionals uniting designers, technologists, and logistics specialists. Our experience allows us to create packaging solutions that not only protect the product and attract customers' attention but also fully comply with marketplace requirements."
+      },
+      "stats": {
+        "experience": {
+          "value": "5+",
+          "label": "years of experience"
+        },
+        "projects": {
+          "value": "1000+",
+          "label": "projects"
+        },
+        "clients": {
+          "value": "100+",
+          "label": "clients"
+        }
+      }
+    },
+    "production": {
+      "title": "Production Facilities",
+      "subtitle": "Full-cycle in-house production allows us to control quality and optimize packaging manufacturing time",
+      "facilities": {
+        "equipment": {
+          "title": "Modern Equipment",
+          "description": "Automated lines for producing packaging of any complexity"
+        },
+        "warehouse": {
+          "title": "Warehouse Complex",
+          "description": "Equipped facilities for storing materials and finished products"
+        },
+        "lab": {
+          "title": "Control Laboratory",
+          "description": "Testing materials and finished products for compliance with standards"
+        }
+      },
+      "stats": {
+        "area": {
+          "value": "2000m²",
+          "label": "production area"
+        },
+        "equipment": {
+          "value": "50+",
+          "label": "equipment units"
+        },
+        "production": {
+          "value": "100K+",
+          "label": "units per month"
+        },
+        "operation": {
+          "value": "24/7",
+          "label": "operation mode"
+        }
+      }
+    },
+    "certificates": {
+      "title": "Certificates and Documents",
+      "subtitle": "Our products comply with all necessary quality standards and have the required certificates",
+      "items": [
+        {
+          "title": "ISO 9001:2015",
+          "description": "Quality Management System"
+        },
+        {
+          "title": "GOST R ISO 14001-2016",
+          "description": "Environmental Management"
+        },
+        {
+          "title": "Certificate of Conformity",
+          "description": "Compliance with TR CU requirements"
+        }
+      ],
+      "note": "You can review the complete package of documents during a personal meeting or request them by email",
+      "requestButton": "Request Documents"
+    },
+    "geography": {
+      "title": "Work Geography",
+      "subtitle": "We deliver throughout Kyrgyzstan and CIS countries",
+      "advantages": {
+        "delivery": {
+          "title": "Wide Delivery Network",
+          "description": "We work with all regions of Kyrgyzstan and CIS countries"
+        },
+        "logistics": {
+          "title": "Optimal Logistics",
+          "description": "Established supply chains with minimal delivery times"
+        },
+        "customs": {
+          "title": "Customs Clearance",
+          "description": "Assistance in preparing all necessary documents"
+        }
+      },
+      "regions": {
+        "title": "Regions of Kyrgyzstan",
+        "list": [
+          "Bishkek",
+          "Osh",
+          "Jalal-Abad",
+          "Karakol",
+          "Naryn",
+          "Talas",
+          "Batken"
+        ]
+      },
+      "countries": {
+        "title": "CIS Countries",
+        "list": [
+          "Kazakhstan",
+          "Uzbekistan",
+          "Tajikistan",
+          "Russia"
+        ]
+      }
+    }
   }
 }

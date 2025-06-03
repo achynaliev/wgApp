@@ -1,8 +1,20 @@
+import { useTranslation } from 'react-i18next';
+
+interface Advantage {
+  id: string;
+  title: string;
+  description: string;
+  icon: JSX.Element;
+}
+
 const GeographySection = () => {
-  const advantages = [
+  const { t } = useTranslation();
+
+  const advantages: Advantage[] = [
     {
-      title: 'Широкая сеть доставки',
-      description: 'Работаем со всеми регионами Кыргызстана и странами СНГ',
+      id: 'delivery',
+      title: t('about.geography.advantages.delivery.title'),
+      description: t('about.geography.advantages.delivery.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -10,8 +22,9 @@ const GeographySection = () => {
       ),
     },
     {
-      title: 'Оптимальная логистика',
-      description: 'Выстроенные цепочки поставок с минимальными сроками',
+      id: 'logistics',
+      title: t('about.geography.advantages.logistics.title'),
+      description: t('about.geography.advantages.logistics.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -19,8 +32,9 @@ const GeographySection = () => {
       ),
     },
     {
-      title: 'Таможенное оформление',
-      description: 'Помощь в оформлении всех необходимых документов',
+      id: 'customs',
+      title: t('about.geography.advantages.customs.title'),
+      description: t('about.geography.advantages.customs.description'),
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -30,20 +44,20 @@ const GeographySection = () => {
   ];
 
   const regions = [
-    'Бишкек',
-    'Ош',
-    'Джалал-Абад',
-    'Каракол',
-    'Нарын',
-    'Талас',
-    'Баткен',
+    t('about.geography.regions.list.0'),
+    t('about.geography.regions.list.1'),
+    t('about.geography.regions.list.2'),
+    t('about.geography.regions.list.3'),
+    t('about.geography.regions.list.4'),
+    t('about.geography.regions.list.5'),
+    t('about.geography.regions.list.6'),
   ];
 
   const countries = [
-    'Казахстан',
-    'Узбекистан',
-    'Таджикистан',
-    'Россия',
+    t('about.geography.countries.list.0'),
+    t('about.geography.countries.list.1'),
+    t('about.geography.countries.list.2'),
+    t('about.geography.countries.list.3'),
   ];
 
   return (
@@ -51,10 +65,10 @@ const GeographySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            География работы
+            {t('about.geography.title')}
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
-            Мы осуществляем поставки по всей территории Кыргызстана и в страны СНГ
+            {t('about.geography.subtitle')}
           </p>
         </div>
 
@@ -62,7 +76,7 @@ const GeographySection = () => {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {advantages.map((advantage) => (
               <div
-                key={advantage.title}
+                key={advantage.id}
                 className="bg-white rounded-lg shadow-sm px-6 py-8"
               >
                 <div className="flex items-center">
@@ -88,7 +102,7 @@ const GeographySection = () => {
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="bg-white rounded-lg shadow-sm px-6 py-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">
-              Регионы Кыргызстана
+              {t('about.geography.regions.title')}
             </h3>
             <div className="grid grid-cols-2 gap-4">
               {regions.map((region) => (
@@ -117,7 +131,7 @@ const GeographySection = () => {
 
           <div className="bg-white rounded-lg shadow-sm px-6 py-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">
-              Страны СНГ
+              {t('about.geography.countries.title')}
             </h3>
             <div className="grid grid-cols-2 gap-4">
               {countries.map((country) => (
