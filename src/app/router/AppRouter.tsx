@@ -10,7 +10,7 @@ const AppRouter = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/catalog" element={<CatalogPage />} />
+      {/* <Route path="/catalog" element={<CatalogPage />} /> */}
       <Route path="/contacts" element={<ContactsPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
