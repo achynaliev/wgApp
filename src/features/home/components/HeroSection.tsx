@@ -4,7 +4,9 @@ import catalogPDF from '../../../assets/APT_catalog.pdf';
 const HeroSection = () => {
   const { t } = useTranslation();
 
-  const buttonBaseClasses = "w-full sm:w-[280px] flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-md text-white transform transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 md:text-lg";
+  const buttonBaseClasses = "w-full flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-md text-white transform transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 md:text-lg";
+  const largeButtonClasses = "sm:w-[308px]"; // 280px + 10%
+  const smallButtonClasses = "sm:w-[252px]"; // 280px - 10%
 
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -36,7 +38,7 @@ const HeroSection = () => {
                     href="https://wa.me/77768472061"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${buttonBaseClasses} bg-primary-600 hover:bg-primary-700 focus:ring-primary-500`}
+                    className={`${buttonBaseClasses} ${largeButtonClasses} bg-primary-600 hover:bg-primary-700 focus:ring-primary-500`}
                   >
                     <svg 
                       className="w-5 h-5 mr-3 flex-shrink-0" 
@@ -53,7 +55,7 @@ const HeroSection = () => {
                     href="https://wa.me/77768472061"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${buttonBaseClasses} bg-blue-600 hover:bg-blue-700 focus:ring-blue-500`}
+                    className={`${buttonBaseClasses} ${smallButtonClasses} bg-blue-600 hover:bg-blue-700 focus:ring-blue-500`}
                   >
                     <svg 
                       className="w-5 h-5 mr-3 flex-shrink-0" 
@@ -68,7 +70,7 @@ const HeroSection = () => {
                 <div className="rounded-md w-full sm:w-auto">
                   <button
                     onClick={handleDownload}
-                    className={`${buttonBaseClasses} bg-primary-600 hover:bg-primary-700 focus:ring-primary-500`}
+                    className={`${buttonBaseClasses} ${largeButtonClasses} bg-primary-600 hover:bg-primary-700 focus:ring-primary-500`}
                   >
                     <svg 
                       className="w-5 h-5 mr-3 flex-shrink-0" 
