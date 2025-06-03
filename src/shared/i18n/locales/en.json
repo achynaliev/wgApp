@@ -143,7 +143,7 @@
         }
       ]
     },
-    "catalogSection": {
+    "git ": {
       "title": "Our Solutions",
       "subtitle": "Choose the right packaging option for your products",
       "calculateCta": "Calculate Cost",
@@ -224,5 +224,23 @@
     "pageNotFound": "Page Not Found",
     "pageNotFoundDescription": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "backToHome": "Back to Home"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "Get in touch with us in any convenient way",
+    "contactInfo": {
+      "title": "Contact Information",
+      "workingHours": "9:00 AM - 7:00 PM, seven days a week"
+    },
+    "legal": {
+      "title": "Legal Information",
+      "companyName": "Packaging Company LLC",
+      "inn": "TIN",
+      "ogrn": "OGRN"
+    },
+    "location": {
+      "title": "How to Find Us",
+      "mapTitle": "Map"
+    }
   }
-} 
+}
