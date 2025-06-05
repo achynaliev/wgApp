@@ -23,15 +23,17 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false,
+    sourcemap: true,
     minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector']
-        }
-      }
+        },
+        format: 'es'
+      },
+      external: []
     }
   },
   optimizeDeps: {
